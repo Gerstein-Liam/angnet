@@ -9,6 +9,8 @@ import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 
+import { LoginComponent } from './components/login/login.component';
+
 import { GoogleMapComponent } from './components/map/map.component';
 
 import { AgmCoreModule } from '@agm/core';
@@ -18,6 +20,7 @@ import { AgmCoreModule } from '@agm/core';
         AppComponent,
         NavMenuComponent,
         HomeComponent,
+        LoginComponent,
         GoogleMapComponent
     ],
     imports: [
@@ -27,6 +30,7 @@ import { AgmCoreModule } from '@agm/core';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
+            { path: 'login', component: LoginComponent },
             { path: 'gmap', component: GoogleMapComponent },
             { path: '**', redirectTo: 'home' }
         ]),
